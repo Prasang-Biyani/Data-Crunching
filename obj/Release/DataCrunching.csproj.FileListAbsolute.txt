@@ -1,0 +1,9 @@
+C:\Prasang\DataCrunching\DataCrunching\bin\Release\DataCrunching.exe.config
+C:\Prasang\DataCrunching\DataCrunching\bin\Release\DataCrunching.exe
+C:\Prasang\DataCrunching\DataCrunching\bin\Release\DataCrunching.pdb
+C:\Prasang\DataCrunching\DataCrunching\bin\Release\FileHelpers.dll
+C:\Prasang\DataCrunching\DataCrunching\bin\Release\FileHelpers.xml
+C:\Prasang\DataCrunching\DataCrunching\obj\Release\DataCrunching.csproj.CoreCompileInputs.cache
+C:\Prasang\DataCrunching\DataCrunching\obj\Release\DataCrunching.csproj.CopyComplete
+C:\Prasang\DataCrunching\DataCrunching\obj\Release\DataCrunching.exe
+C:\Prasang\DataCrunching\DataCrunching\obj\Release\DataCrunching.pdb

@@ -1,10 +1,10 @@
-C:\Prasang\DataCrunching\DataCrunching\bin\Debug\DataCrunching.exe.config
 C:\Prasang\DataCrunching\DataCrunching\bin\Debug\DataCrunching.exe
-C:\Prasang\DataCrunching\DataCrunching\bin\Debug\DataCrunching.pdb
 C:\Prasang\DataCrunching\DataCrunching\bin\Debug\FileHelpers.dll
+C:\Prasang\DataCrunching\DataCrunching\bin\Debug\DataCrunching.exe.config
 C:\Prasang\DataCrunching\DataCrunching\bin\Debug\FileHelpers.xml
-C:\Prasang\DataCrunching\DataCrunching\obj\Debug\DataCrunching.csprojAssemblyReference.cache
 C:\Prasang\DataCrunching\DataCrunching\obj\Debug\DataCrunching.csproj.CoreCompileInputs.cache
 C:\Prasang\DataCrunching\DataCrunching\obj\Debug\DataCrunching.csproj.CopyComplete
 C:\Prasang\DataCrunching\DataCrunching\obj\Debug\DataCrunching.exe
 C:\Prasang\DataCrunching\DataCrunching\obj\Debug\DataCrunching.pdb
+C:\Prasang\DataCrunching\DataCrunching\bin\Debug\DataCrunching.pdb
+C:\Prasang\DataCrunching\DataCrunching\obj\Debug\DataCrunching.csprojAssemblyReference.cache
