@@ -12,38 +12,43 @@ namespace DataCrunching
         {
             var emailEngine = new FileHelperEngine<Email>();
             var emailsList = emailEngine.ReadFile("Email.tsv").ToList();
-            //Console.WriteLine("Done 'Output.tsv'");
-            //var passEngine = new FileHelperEngine<Password>();
-            //var passList = passEngine.ReadFile("Files/plain_32m.tsv");
-            //Console.WriteLine("Read 'plain_32m.tsv'");
-            //Dictionary<string, string> emailPass = new Dictionary<string, string>();
-            //foreach (var pass in passList)
-            //    emailPass.Add(pass.email, pass.plain_text);
-            //foreach (var cred in credsList)
-            //{
-            //    if (!emailPass.ContainsKey(cred.Email))
-            //        emailPass.Remove(cred.Email);
-            //}
-            //Console.WriteLine(emailPass.Count());
-            Dictionary<string, string> passDict = new Dictionary<string, string>();
-            using (StreamReader sr = new StreamReader("Files/plain_32m - Copy.tsv"))
+
+            Dictionary<string, string> emailDict = new Dictionary<string, string>();
+            foreach(var email in emailsList)
             {
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                if (!emailDict.ContainsKey(email.email))
                 {
-                    string[] temp = line.Split('\t');
-                    foreach(var cred in emailsList)
-                    {
-                        if (!passDict.ContainsKey(cred.email))
-                            passDict.Add(cred.email, temp[1]);
-                    }
+                    emailDict.Add(email.email, "false");
                 }
             }
-            using (StreamWriter sw = new StreamWriter("Updated List.tsv"))
+            Console.WriteLine("Done adding EmailDict");
+            using(StreamReader sr = new StreamReader(@"Files/plain_32m.tsv"))
             {
-                foreach (var pass in passDict)
-                    sw.WriteLine(pass.Key + "\t" + pass.Value);
+               
+                string line;
+                while((line = sr.ReadLine()) != null)
+                {
+                    string[] tsv = line.Split(new char[] { '\t' }).ToArray();
+                    //foreach (var email in emailDict)
+                    //{
+                    //    if (email.Key == tsv[0])
+                    //        emailDict[email.Key] = tsv[1];
+                    //}
+                        if (emailDict.ContainsKey(tsv[0]))
+                            emailDict[tsv[0]] = tsv[1];
+                }
             }
+            Console.WriteLine("Done Reading 32M and Updating Dictionary ...");
+
+            using(StreamWriter sw = new StreamWriter("Email_pass.tsv"))
+            {
+                foreach(var email in emailDict)
+                {
+                    sw.WriteLine(email.Key + "\t" + email.Value);
+                }
+            }
+            Console.WriteLine("Done");
+      
         }
     }
 }

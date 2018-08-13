@@ -21,8 +21,8 @@ namespace DataCrunching
     [IgnoreEmptyLines]
     public class Password
     {
-        public string email { get; set; }
-        public string plain_text { get; set; }
+        public string Email { get; set; }
+        public string Plain_text { get; set; }
     }
     [DelimitedRecord("\t")]
     [IgnoreEmptyLines]
